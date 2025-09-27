@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo2.png'
 import { UserIcon, HeartbeatIcon, ShieldCheckIcon, CalendarDotsIcon, SignOutIcon, FilesIcon } from "@phosphor-icons/react";
 
 const Sidebar = () => {
@@ -8,7 +8,7 @@ const Sidebar = () => {
         
         {/* Logo */}
         <div className='w-fit h-fit flex flex-col items-center'> 
-            <img src={logo} alt="logo" className='w-full h-full' />
+            <img src={logo} alt="logo" className='w-[80px] h-[80px]' />
             <p>HealthLens</p>
         </div>
 

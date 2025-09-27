@@ -2,6 +2,8 @@ import React from 'react'
 import Sidebar from './components/Sidebar'
 import Navbar from './components/Navbar'
 import brain from './assets/brain.png'
+import pills from './assets/pills.png'
+import blood from './assets/blood.png'
 
 const Dashboard = () => {
   return (
@@ -16,6 +18,53 @@ const Dashboard = () => {
           <div className='flex flex-col h-full w-[30%] bg-[#ff3344] items-center justify-between'>
             <p><b>What's Up With Your Health, <br /> TODAY!</b></p>
             
+            <div className="backdrop-blur-lg bg-white/30 border border-white/20 shadow-lg rounded-2xl p-4">
+              <img src="/your-image.png" alt="Graph" className="w-full h-24 object-contain" />
+            </div>
+
+            
+            <div className="grid grid-cols-3 gap-4">
+              
+              <div className="backdrop-blur-lg bg-white/30 border border-white/20 shadow-lg rounded-2xl p-4 flex flex-col items-center">
+                <svg className="w-full h-16" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 25C20 10 40 40 60 25C80 10 100 40 120 25C140 10 160 40 180 25C190 18 200 25 200 25" 
+                    stroke="url(#grad1)" stroke-width="3" fill="none"/>
+                  <defs>
+                    <linearGradient id="grad1" x1="0" y1="0" x2="200" y2="0">
+                      <stop stop-color="#7F00FF"/>
+                      <stop offset="1" stop-color="#E100FF"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <p className="text-gray-800 font-semibold mt-2">Sweating<br/><span className="text-green-600">Good</span></p>
+              </div>
+
+              <div className="backdrop-blur-lg bg-white/30 border border-white/20 shadow-lg rounded-2xl p-4 flex flex-col items-center justify-center">
+                <img src={pills} alt="Pills" className="w-[10px] h-[10px]" />
+                <p className="mt-2 text-lg font-bold">3 Pills</p>
+              </div>
+
+              
+              <div className="backdrop-blur-lg bg-white/30 border border-white/20 shadow-lg rounded-2xl p-4 flex flex-col items-center justify-center">
+                <img src={blood} alt="Blood" className="w-[10px] h-[10px]" />
+                <p className="text-red-600 font-semibold mt-2">Blood<br/>Normal</p>
+              </div>
+            </div>
+
+            
+            <div className="grid grid-cols-3 gap-4">
+              
+              <div className="backdrop-blur-lg bg-white/30 border border-white/20 shadow-lg rounded-2xl p-4 flex flex-col items-center justify-center">
+                <p className="text-2xl font-bold">2h</p>
+                <p className="text-gray-600">Hours</p>
+              </div>
+
+              
+              <div className="backdrop-blur-lg bg-white/30 border border-white/20 shadow-lg rounded-2xl p-4 flex flex-col items-center justify-center col-span-2">
+                <p className="text-gray-700">Your Brain Activity</p>
+                <p className="text-green-500 font-semibold">Normal</p>
+              </div>
+            </div>
           </div>
 
           <img src={brain} alt="" className='w-[330px] h-[300px]'/>
